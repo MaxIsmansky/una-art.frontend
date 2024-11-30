@@ -28,3 +28,15 @@
 .navLink:hover {
     color: #000;
 }
+
+.logoLink {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.logoLink:hover {
+    color: #007bff;
+}

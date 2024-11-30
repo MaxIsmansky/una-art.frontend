@@ -1,0 +1,38 @@
+.contacts {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.contacts h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contacts p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contactList {
+    list-style: none;
+    padding: 0;
+}
+
+.contactList li {
+    margin: 10px 0;
+}
+
+.contactLink {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
