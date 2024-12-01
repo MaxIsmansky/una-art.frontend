@@ -1,34 +1,16 @@
+/* Общий стиль хедера */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #ffffff, #f9f9f9); /* Лёгкий градиент */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    position: relative; /* Для правильного позиционирования */
+    z-index: 100;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-.nav {
-    display: flex;
-    gap: 20px;
-}
-
-.navLink {
-    text-decoration: none;
-    color: #555;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.navLink:hover {
-    color: #000;
-}
-
+/* Логотип */
 .logoLink {
     text-decoration: none;
     font-size: 24px;
@@ -38,5 +20,92 @@
 }
 
 .logoLink:hover {
-    color: #007bff;
+    color: #0071e3;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px; /* Фиксированный отступ для текста */
+    transition: color 0.3s ease;
+}
+
+.navLink::before {
+    content: '';
+    position: absolute;
+    left: -10%; /* Смещение для более широкого фона */
+    top: 0;
+    width: 120%; /* Фон шире текста */
+    height: 100%;
+    background-color: rgba(0, 113, 227, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.navLink:hover {
+    color: #0071e3;
+}
+
+.navLink:hover::before {
+    opacity: 1;
+}
+
+/* Контейнер навигации с подменю */
+.navItem {
+    position: relative;
+}
+
+/* Выпадающее меню */
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 30px); /* Расположено ниже раздела */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(245, 245, 245, 0.95); /* Серый полупрозрачный фон */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Тень для отделения */
+    border-radius: 12px; /* Закруглённые углы */
+    padding: 10px 0;
+    z-index: 200;
+    min-width: 220px;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Лёгкая граница */
+}
+
+/* Элементы подменю */
+.dropdownItem {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.dropdownItem:hover {
+    background-color: rgba(0, 113, 227, 0.1); /* Полупрозрачный синий фон */
+    color: #0071e3;
+}
+
+/* Анимация появления */
+.dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navItem:hover .dropdownMenu {
+    opacity: 1;
+    visibility: visible;
 }
