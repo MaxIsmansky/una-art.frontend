@@ -1,37 +1,43 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
 const Home = () => {
+    const products = [
+        { id: 1, name: 'Картина "Закат"', price: '5 000 ₽', image: 'https://via.placeholder.com/300' },
+        { id: 2, name: 'Скульптура "Совершенство"', price: '7 500 ₽', image: 'https://via.placeholder.com/300' },
+        { id: 3, name: 'Деревянная поделка', price: '3 000 ₽', image: 'https://via.placeholder.com/300' },
+    ];
+
     return (
         <div className={styles.home}>
             {/* Секция героя */}
             <section className={styles.heroSection}>
                 <h1 className={styles.heroTitle}>Уникальные хендмейд вещи</h1>
-                <p className={styles.heroSubtitle}>
-                    Искусство, созданное с любовью.
-                </p>
-                <button className={styles.heroButton}>Узнать больше</button>
+                <p className={styles.heroSubtitle}>Искусство, созданное с любовью.</p>
             </section>
 
             {/* Секция продуктов */}
             <section className={styles.productsSection}>
                 <h2 className={styles.sectionTitle}>Популярные товары</h2>
                 <div className={styles.productsGrid}>
-                    <div className={styles.productCard}>
-                        <img src="https://via.placeholder.com/300" alt="Продукт 1" className={styles.productImage} />
-                        <h3 className={styles.productTitle}>Картина "Закат"</h3>
-                        <p className={styles.productPrice}>5 000 ₽</p>
-                    </div>
-                    <div className={styles.productCard}>
-                        <img src="https://via.placeholder.com/300" alt="Продукт 2" className={styles.productImage} />
-                        <h3 className={styles.productTitle}>Скульптура "Совершенство"</h3>
-                        <p className={styles.productPrice}>7 500 ₽</p>
-                    </div>
-                    <div className={styles.productCard}>
-                        <img src="https://via.placeholder.com/300" alt="Продукт 3" className={styles.productImage} />
-                        <h3 className={styles.productTitle}>Деревянная поделка</h3>
-                        <p className={styles.productPrice}>3 000 ₽</p>
-                    </div>
+                    {products.map((product) => (
+                        <Link
+                            key={product.id}
+                            to={`/shop/paintings/${product.id}`} // Измените на соответствующий маршрут
+                            className={styles.productCard}
+                        >
+                            <img
+                                src={product.image}
+                                alt={product.name}
+                                className={styles.productImage}
+                            />
+                            <div className={styles.productInfo}>
+                                <h3 className={styles.productTitle}>{product.name}</h3>
+                                <p className={styles.productPrice}>{product.price}</p>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </section>
 

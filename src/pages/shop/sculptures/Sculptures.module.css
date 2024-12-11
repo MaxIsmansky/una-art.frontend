@@ -1,0 +1,62 @@
+/* Sculptures.module.css */
+
+.sculptures {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.sculptures h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #5b8d6a; /* Тускло-зелёный цвет */
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Чтобы карточки переносились на следующую строку */
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none; /* Убираем подчёркивание ссылок */
+    color: inherit; /* Сохраняем цвет текста */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.info {
+    padding: 10px;
+}
+
+.name {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.price {
+    font-size: 16px;
+    color: #555;
+}
