@@ -66,34 +66,43 @@
 }
 
 .productCard {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .productCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .productImage {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
 }
 
 .productTitle {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.productInfo {
+    padding: 10px;
 }
 
 .productPrice {
     font-size: 16px;
-    color: #0071e3;
+    color: #555;
 }
 
 /* Секция преимуществ */

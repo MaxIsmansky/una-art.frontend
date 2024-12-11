@@ -5,6 +5,10 @@ import Error from "../pages/Error";
 import NotFound from "../components/not-found/NotFound";
 import Contacts from "../pages/contacts/Contacts";
 import About from "../pages/about/About";
+import Shop from "../pages/shop/Shop";
+import Paintings from "../pages/shop/paintings/Paintings";
+import Sculptures from "../pages/shop/sculptures/Sculptures";
+import Accessories from "../pages/shop/accessories/Accessories";
 
 const AppRoutes = () => {
     return (
@@ -13,6 +17,10 @@ const AppRoutes = () => {
             <Route path="/error" element={<Error/>}/>
             <Route path="/contacts" element={<Contacts/>}/>
             <Route path="/about" element={<About/>}/>
+            <Route path="/shop" element={<Shop/>}/>
+            <Route path="/shop/paintings" element={<Paintings/>}/>
+            <Route path="/shop/sculptures" element={<Sculptures/>}/>
+            <Route path="/shop/accessories" element={<Accessories/>}/>
             {/* Обработка неизвестных маршрутов */}
             <Route path="*" element={<NotFound/>}/>
         </Routes>
