@@ -9,6 +9,7 @@ import Shop from "../pages/shop/Shop";
 import Paintings from "../pages/shop/paintings/Paintings";
 import Sculptures from "../pages/shop/sculptures/Sculptures";
 import Accessories from "../pages/shop/accessories/Accessories";
+import ProductDetails from "../pages/shop/product-details/ProductDetails";
 
 const AppRoutes = () => {
     return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
             <Route path="/shop/paintings" element={<Paintings/>}/>
             <Route path="/shop/sculptures" element={<Sculptures/>}/>
             <Route path="/shop/accessories" element={<Accessories/>}/>
+            <Route path="/shop/:category/:productId" element={<ProductDetails />} />
             {/* Обработка неизвестных маршрутов */}
             <Route path="*" element={<NotFound/>}/>
         </Routes>
