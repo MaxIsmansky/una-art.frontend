@@ -4,9 +4,9 @@ import styles from './Home.module.css';
 
 const Home = () => {
     const products = [
-        { id: 1, name: 'Картина "Закат"', price: '5 000 ₽', image: 'https://via.placeholder.com/300' },
-        { id: 2, name: 'Скульптура "Совершенство"', price: '7 500 ₽', image: 'https://via.placeholder.com/300' },
-        { id: 3, name: 'Деревянная поделка', price: '3 000 ₽', image: 'https://via.placeholder.com/300' },
+        { id: 1, name: 'Картина "Закат"', price: '5 000 ₽', image: '/assets/300x300.png' },
+        { id: 2, name: 'Скульптура "Совершенство"', price: '7 500 ₽', image: '/assets/300x300.png' },
+        { id: 3, name: 'Деревянная поделка', price: '3 000 ₽', image: '/assets/300x300.png' },
     ];
 
     return (
