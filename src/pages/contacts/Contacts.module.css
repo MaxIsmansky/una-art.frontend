@@ -1,0 +1,50 @@
+/* Contacts.module.css */
+
+.contacts {
+    max-width: 800px; /* Ограничиваем ширину контента */
+    margin: 0 auto; /* Центрируем контент */
+    padding: 20px;
+    color: #333; /* Основной цвет текста */
+    font-family: 'Arial', sans-serif; /* Чистый шрифт */
+    text-align: center; /* Центрируем весь текст */
+}
+
+.contacts h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px; /* Увеличенный отступ */
+    color: #5b8d6a; /* Тускло-зелёный */
+}
+
+.contacts .description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 60px; /* Увеличенный отступ */
+}
+
+.info, .social, .location {
+    margin-bottom: 60px; /* Увеличенный отступ между секциями */
+}
+
+.info h2, .social h2, .location h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Увеличенный отступ для заголовков */
+    color: #5b8d6a; /* Тускло-зелёный */
+}
+
+.info p, .social p, .location p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; /* Вторичный цвет текста */
+}
+
+.contacts .link {
+    color: #5b8d6a; /* Цвет ссылки в соответствии с основным стилем */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacts .link:hover {
+    color: #4a7c59; /* Ещё более тёмный зелёный при наведении */
+}
