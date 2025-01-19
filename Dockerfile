@@ -1,5 +1,5 @@
 # Step 1: Use the Node.js image as the base image for building the app
-FROM node:18 AS build
+FROM --platform=linux/amd64 node:18 AS build
 
 # Step 2: Set the working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Step 7: Use a lightweight Nginx image to serve the built application
-FROM nginx:alpine
+FROM --platform=linux/amd64 nginx:alpine
 
 # Step 8: Copy the built files from the previous stage to the Nginx default directory
 COPY --from=build /app/build /usr/share/nginx/html
