@@ -4,9 +4,27 @@ import styles from './Home.module.css';
 
 const Home = () => {
     const products = [
-        { id: 1, name: 'Картина "Закат"', price: '5 000 ₽', image: '/assets/300x300.png' },
-        { id: 2, name: 'Скульптура "Совершенство"', price: '7 500 ₽', image: '/assets/300x300.png' },
-        { id: 3, name: 'Деревянная поделка', price: '3 000 ₽', image: '/assets/300x300.png' },
+        {
+            id: 1,
+            name: 'Картина "Закат"',
+            price: '5 000 ₽',
+            image: '/assets/300x300.png',
+            category: 'paintings',
+        },
+        {
+            id: 2,
+            name: 'Скульптура "Совершенство"',
+            price: '7 500 ₽',
+            image: '/assets/300x300.png',
+            category: 'sculptures',
+        },
+        {
+            id: 3,
+            name: 'Деревянная поделка',
+            price: '3 000 ₽',
+            image: '/assets/300x300.png',
+            category: 'accessories',
+        },
     ];
 
     return (
@@ -24,7 +42,7 @@ const Home = () => {
                     {products.map((product) => (
                         <Link
                             key={product.id}
-                            to={`/shop/paintings/${product.id}`} // Измените на соответствующий маршрут
+                            to={`/shop/${product.category}/${product.id}`}
                             className={styles.productCard}
                         >
                             <img
